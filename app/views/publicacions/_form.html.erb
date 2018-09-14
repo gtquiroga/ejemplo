@@ -1,0 +1,52 @@
+<%= form_with(model: publicacion, local: true) do |form| %>
+  <% if publicacion.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(publicacion.errors.count, "error") %> prohibited this publicacion from being saved:</h2>
+
+      <ul>
+      <% publicacion.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :titulo %>
+    <%= form.text_field :titulo, id: :publicacion_titulo %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ciudad %>
+    <%= form.select :ciudad, Ciudad.all.collect{|p| p.nombre}, id: :publicacion_ciudad %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tipo %>
+    <%= form.text_field :tipo, id: :publicacion_tipo %>
+  </div>
+
+  <div class="field">
+    <%= form.label :texto %>
+    <%= form.text_area :texto, id: :publicacion_texto %>
+  </div>
+
+  <div class="field">
+    <%= form.label :autor %>
+    <%= form.text_field :autor, id: :publicacion_autor %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fecha %>
+    <%= form.date_select :fecha, id: :publicacion_fecha %>
+  </div>
+
+  <div class="field">
+    <%= form.label :puntaje %>
+    <%= form.number_field :puntaje, id: :publicacion_puntaje %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

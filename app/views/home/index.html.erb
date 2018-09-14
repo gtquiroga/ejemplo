@@ -1,0 +1,11 @@
+<% if user_signed_in? %>
+  <h1>Bienvedido <%= current_user.email %></h1>
+  <%= link_to 'Ver paises', pais_path %>
+  <%= link_to 'Ver ciudades', ciudads_path %>
+  <%= link_to 'Ver publicaciones', publicacions_path %>
+<% else %>
+  <h1>App Grupo 27</h1>
+<% end %>
+
+
+<p></p>

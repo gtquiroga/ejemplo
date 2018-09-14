@@ -4,7 +4,12 @@ class PaisController < ApplicationController
   # GET /pais
   # GET /pais.json
   def index
-    @pais = Pai.all
+    @pais = Pai
+    if params[:search]
+      @pais = Pai.where('nombre LIKE ?',"%#{params[:search]}%")
+    else
+      @pais = Pai.all
+    end
   end
 
   # GET /pais/1

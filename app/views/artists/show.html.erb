@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @artist.name %>
+</p>
+
+<p>
+  <strong>Birth year:</strong>
+  <%= @artist.birth_year %>
+</p>
+
+<p>
+  <strong>First album year:</strong>
+  <%= @artist.first_album_year %>
+</p>
+
+<%= link_to 'Edit', edit_artist_path(@artist) %> |
+<%= link_to 'Back', artists_path %>
+
+<%= render partial: 'albums/albums', locals: {albums: @artist.albums} %>

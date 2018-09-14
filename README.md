@@ -1,14 +1,24 @@
-# Repositorio para el grupo 27
+# README
 
-### Integrantes:
+This README would normally document whatever steps are necessary to get the
+application up and running.
 
-- Javiera Inostroza
-- Samuel Zúñiga
-- Gonzalo Quiroga
+Things you may want to cover:
 
+* Ruby version
 
-### [Link app heroku](https://blooming-gorge-89769.herokuapp.com)
-### [Link de Trello con los relatos de usuario en formas de tarjetas](https://trello.com/b/VaZN4vhg/planificaci%C3%B3n-proyecto-iic2143)
-*Las condiciones de satisfacción se encuentran en la descripción de las tarjetas de Trello*
-### [Link del pdf con los relatos de usuario](https://github.com/IIC2143-2018-2/grupo-27/blob/master/relatos/RELATOS%20DE%20USUARIO.pdf)
-### [Link del pdf con la propuesta de features](https://github.com/IIC2143-2018-2/grupo-27/blob/master/PROPUESTAS.pdf)
+* System dependencies
+
+* Configuration
+
+* Database creation
+
+* Database initialization
+
+* How to run the test suite
+
+* Services (job queues, cache servers, search engines, etc.)
+
+* Deployment instructions
+
+* ...

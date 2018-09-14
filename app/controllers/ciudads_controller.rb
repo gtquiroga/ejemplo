@@ -4,7 +4,11 @@ class CiudadsController < ApplicationController
   # GET /ciudads
   # GET /ciudads.json
   def index
-    @ciudads = Ciudad.all
+    if params[:search]
+      @ciudads = Ciudad.where('nombre LIKE ?',"%#{params[:search]}%")
+    else
+      @ciudads = Ciudad.all
+    end
   end
 
   # GET /ciudads/1

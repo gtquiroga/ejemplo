@@ -1,6 +1,10 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Pais</h1>
+<h1>Paises</h1>
+<%= form_tag(pais_path, method: :get) do %>
+  Pais <%= text_field_tag :search, params[:search]%>
+  <%= submit_tag 'Buscar', name: nil %>
+<% end %>
 
 <table>
   <thead>
@@ -18,9 +22,9 @@
         <td><%= pai.nombre %></td>
         <td><%= pai.descripcion %></td>
         <td><%= pai.suscriptores %></td>
-        <td><%= link_to 'Show', pai %></td>
-        <td><%= link_to 'Edit', edit_pai_path(pai) %></td>
-        <td><%= link_to 'Destroy', pai, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Ver', pai %></td>
+        <td><%= link_to 'Editar', edit_pai_path(pai) %></td>
+        <td><%= link_to 'Eliminar', pai, method: :delete, data: { confirm: 'Estas seguro?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -28,4 +32,4 @@
 
 <br>
 
-<%= link_to 'New Pai', new_pai_path %>
+<%= link_to 'Nuevo Pais', new_pai_path %>
